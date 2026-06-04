@@ -1,17 +1,142 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Comback AI</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Comback AI</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+color:white;
+text-align:center;
+}
+
+.hero{
+padding:100px 20px;
+}
+
+h1{
+font-size:60px;
+margin-bottom:10px;
+}
+
+.tagline{
+font-size:22px;
+opacity:0.9;
+}
+
+.search-box{
+margin-top:40px;
+}
+
+input{
+width:300px;
+max-width:80%;
+padding:15px;
+border:none;
+border-radius:10px;
+font-size:18px;
+}
+
+button{
+padding:15px 25px;
+border:none;
+border-radius:10px;
+background:#06b6d4;
+color:white;
+font-size:18px;
+cursor:pointer;
+margin-left:10px;
+}
+
+button:hover{
+background:#0891b2;
+}
+
+#result{
+margin-top:30px;
+font-size:22px;
+}
+
+.features{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+padding:50px 20px;
+}
+
+.card{
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
+padding:20px;
+border-radius:15px;
+width:220px;
+}
+
+</style>
 </head>
+
 <body>
-    <h1>Comback AI</h1>
-    <p>Learn anything in minutes.</p>
 
-    <input id="topic" placeholder="Enter topic">
-    <button onclick="generate()">Generate Notes</button>
+<div class="hero">
 
-    <div id="result"></div>
+<h1>🚀 Comback AI</h1>
 
-    <script src="script.js"></script>
+<p class="tagline">
+Learn Anything in Minutes
+</p>
+
+<div class="search-box">
+<input id="topic" placeholder="Enter Topic">
+<button onclick="generate()">Generate Notes</button>
+</div>
+
+<div id="result"></div>
+
+</div>
+
+<div class="features">
+
+<div class="card">
+<h3>📖 Short Notes</h3>
+<p>Quick chapter summaries</p>
+</div>
+
+<div class="card">
+<h3>📊 Diagrams</h3>
+<p>Visual learning made easy</p>
+</div>
+
+<div class="card">
+<h3>❓ MCQs</h3>
+<p>Instant practice questions</p>
+</div>
+
+<div class="card">
+<h3>⚡ Revision</h3>
+<p>2-minute quick revision</p>
+</div>
+
+</div>
+
+<script>
+
+function generate(){
+
+let topic=document.getElementById("topic").value;
+
+document.getElementById("result").innerHTML=
+"Generating notes for <b>"+topic+"</b>";
+
+}
+
+</script>
+
 </body>
 </html>
