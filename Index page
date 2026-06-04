@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comback AI</title>
+</head>
+<body>
+    <h1>Comback AI</h1>
+    <p>Learn anything in minutes.</p>
+
+    <input id="topic" placeholder="Enter topic">
+    <button onclick="generate()">Generate Notes</button>
+
+    <div id="result"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
