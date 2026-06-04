@@ -66,3 +66,24 @@ typeEffect(output,result);
 },1000);
 
 }
+
+function typeEffect(html,element){
+
+element.innerHTML="";
+
+let i=0;
+
+let interval = setInterval(()=>{
+
+element.innerHTML =
+html.slice(0,i);
+
+i++;
+
+if(i > html.length){
+    clearInterval(interval);
+}
+
+},10);
+
+}
